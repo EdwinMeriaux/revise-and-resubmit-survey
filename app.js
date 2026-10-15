@@ -2,9 +2,7 @@
 const $ = id => document.getElementById(id);
 const cfg = window.SURVEY_CONFIG;
 const state = { cards: [], index: 0, answers: {}, respondentId: crypto.randomUUID(), startedAt: null, busy: false };
-// Start a fresh collection round using the uploaded decks.
-localStorage.removeItem(`demo-submissions:${cfg.game}`);
-sessionStorage.removeItem(`survey-progress:${cfg.game}`);
+// Preserve saved responses and unfinished surveys on this device.
 const savedKey = `survey-progress:deck-v1:${cfg.game}`;
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const configured = !!cfg.submissionEndpoint;
@@ -60,11 +58,8 @@ async function submit(){
  const result={game:cfg.game,respondent_id:state.respondentId,started_at:state.startedAt,completed_at:new Date().toISOString(),overall_interest:Number(document.querySelector('input[name="overall_interest"]:checked')?.value),overall_feedback:$('overall-feedback').value.trim(),cards:state.cards.map(c=>({card_id:c.id,title:c.title,...state.answers[c.id]}))};
  try{
   if(!Number.isInteger(result.overall_interest))throw new Error('Please select an overall game interest rating.');
-  if(configured){await req(result)}
-  else{
-    // DEMO ONLY: responses stay in this browser, not a central database.
-    const submissions=JSON.parse(localStorage.getItem(`demo-submissions:deck-v1:${cfg.game}`)||'[]');submissions.push(result);localStorage.setItem(`demo-submissions:deck-v1:${cfg.game}`,JSON.stringify(submissions));
-  }
+  if(!configured)throw new Error('Response collection is not connected yet. Your answers have not been submitted. Please contact the survey organizer.');
+  await req(result);
   sessionStorage.removeItem(savedKey);show('complete');
  }catch(e){$('overall-error').textContent=e.message}
  finally{state.busy=false;$('submit').disabled=false;$('submit').textContent='Submit feedback ✓'}
@@ -74,4 +69,4 @@ $('next').onclick=()=>{const a=collect();if(!validate(a)){$('survey-error').text
 $('prev').onclick=()=>{collect();state.index=Math.max(0,state.index-1);persist();render()};
 $('back-overall').onclick=()=>{render();show('survey')};$('submit').onclick=submit;
 $('start-new').onclick=()=>location.reload();
-$('mode').textContent=configured?'Responses saved to this game’s GitHub CSV':'Preview mode · configure submissionEndpoint before collecting responses';
+$('mode').textContent=configured?'Your answers will be sent securely to the survey organizer.':'Response collection is not connected yet. Submissions are currently unavailable.';
