@@ -1,10 +1,10 @@
 # revise-and-resubmit-survey
 
-Each participant evaluates one random active card from `cards/cards.pptx`. GitHub Actions renders the slides and publishes the website. `card_overrides.json` excludes templates, reference cards, and answer slides.
+Each participant evaluates five random active cards from `cards/cards.pptx`. GitHub Actions renders the slides and publishes the website. `card_overrides.json` excludes templates, reference cards, and answer slides.
 
 ## Response collection
 
-Both surveys submit to Cloudflare Workers and save to the same private Cloudflare D1 database, **survey-responses**, in the **responses** table. The `game` column identifies each survey. Responses are not written to GitHub or offered for download to participants. Submission is confirmed only after the database accepts it. Retrying the same respondent ID does not create duplicate rows.
+Both surveys submit to Cloudflare Workers and save to the same private Cloudflare D1 database, **survey-responses**, in the **responses** table. The `game` column identifies each survey. Responses are not written to GitHub or offered for download to participants. Submission is confirmed only after the database accepts it. Retrying the same respondent ID and card ID does not create duplicate rows.
 
 To view responses, sign in to Cloudflare, open **Storage & databases → D1 → survey-responses → Console**, and run:
 
@@ -36,3 +36,5 @@ Existing browser-only preview responses are preserved on their originating devic
 ## Manuscript review questions (version 2)
 
 The card form asks for an Accept/Revise/Reject verdict, a 1–5 context clarity rating, optional technical issues, and optional writing issues. Overall game questions remain. New responses have `survey_version=2`, explicit `verdict`, `technical_issues`, and `writing_issues`. `clarity` holds context clarity; `comprehension` retains the verdict index for compatibility. The removed gameplay `interest` field is NULL for version 2. Prior responses are preserved as version 1.
+
+Each submission saves five rows, one per distinct randomly assigned card. All five writes commit together. Earlier one-card responses are preserved.
