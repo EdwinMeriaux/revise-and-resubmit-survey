@@ -14,8 +14,10 @@ export default {async fetch(request,env){
   const text=(x,max)=>typeof x==='string'&&x.length<=max;
   if(!data||data.game!==env.GAME||!Array.isArray(data.cards)||data.cards.length!==1||!text(data.respondent_id,100)||!data.respondent_id||!rating(data.overall_interest)||!text(data.overall_feedback,5000)||!text(data.started_at,40)||!text(data.completed_at,40)||!Number.isFinite(Date.parse(data.started_at))||!Number.isFinite(Date.parse(data.completed_at)))return reply({error:'Invalid survey submission'},400,origin);
   const c=data.cards[0],card=cards.find(x=>x.id===c?.card_id);
-  if(!card||!rating(c.clarity)||!rating(c.interest)||!Number.isInteger(c.comprehension)||c.comprehension<0||c.comprehension>=card.options.length||!text(c.feedback,5000))return reply({error:'Invalid card answers'},400,origin);
-  const result=await env.DB.prepare(`INSERT INTO responses (respondent_id,game,started_at,completed_at,overall_interest,overall_feedback,card_id,card_title,clarity,interest,comprehension,feedback) VALUES (?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(game,respondent_id) DO NOTHING`).bind(data.respondent_id,data.game,data.started_at,data.completed_at,data.overall_interest,data.overall_feedback,c.card_id,card.title,c.clarity,c.interest,c.comprehension,c.feedback).run();
+  const v2=data.survey_version===2;
+  if(data.survey_version!==undefined&&!v2)return reply({error:'Invalid survey version'},400,origin);
+  if(!card||!rating(c.clarity)||!Number.isInteger(c.comprehension)||c.comprehension<0||c.comprehension>=card.options.length||(v2?(!text(c.technical_issues,5000)||!text(c.writing_issues,5000)):(!rating(c.interest)||!text(c.feedback,5000))))return reply({error:'Invalid card answers'},400,origin);
+  const result=await env.DB.prepare(`INSERT INTO responses (respondent_id,game,started_at,completed_at,overall_interest,overall_feedback,card_id,card_title,clarity,interest,comprehension,feedback,survey_version,verdict,technical_issues,writing_issues) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(game,respondent_id) DO NOTHING`).bind(data.respondent_id,data.game,data.started_at,data.completed_at,data.overall_interest,data.overall_feedback,c.card_id,card.title,c.clarity,v2?null:c.interest,c.comprehension,v2?'':c.feedback,v2?2:1,['Accept','Revise','Reject'][c.comprehension],v2?c.technical_issues:null,v2?c.writing_issues:null).run();
   if(!result.success)throw Error('Database write failed');
   return reply({ok:true},200,origin);
  }catch{return reply({error:'Unable to save response. Please try again.'},503,origin)}

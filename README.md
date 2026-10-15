@@ -32,3 +32,7 @@ npx wrangler deploy -c worker/wrangler.toml
 When changing cards, update `worker/allowed-cards.json` from the active card IDs, titles, and options in the generated `cards.json`, then redeploy the Worker.
 
 Existing browser-only preview responses are preserved on their originating devices; they have not been imported into the central database. The old `data/responses.csv` is an unused header-only file.
+
+## Manuscript review questions (version 2)
+
+The card form asks for an Accept/Revise/Reject verdict, a 1–5 context clarity rating, optional technical issues, and optional writing issues. Overall game questions remain. New responses have `survey_version=2`, explicit `verdict`, `technical_issues`, and `writing_issues`. `clarity` holds context clarity; `comprehension` retains the verdict index for compatibility. The removed gameplay `interest` field is NULL for version 2. Prior responses are preserved as version 1.
