@@ -2,7 +2,10 @@
 const $ = id => document.getElementById(id);
 const cfg = window.SURVEY_CONFIG;
 const state = { cards: [], index: 0, answers: {}, respondentId: crypto.randomUUID(), startedAt: null, busy: false };
-const savedKey = `survey-progress:${cfg.game}`;
+// Start a fresh collection round using the uploaded decks.
+localStorage.removeItem(`demo-submissions:${cfg.game}`);
+sessionStorage.removeItem(`survey-progress:${cfg.game}`);
+const savedKey = `survey-progress:deck-v1:${cfg.game}`;
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const configured = !!cfg.submissionEndpoint;
 const req = async (data) => {
@@ -60,7 +63,7 @@ async function submit(){
   if(configured){await req(result)}
   else{
     // DEMO ONLY: responses stay in this browser, not a central database.
-    const submissions=JSON.parse(localStorage.getItem(`demo-submissions:${cfg.game}`)||'[]');submissions.push(result);localStorage.setItem(`demo-submissions:${cfg.game}`,JSON.stringify(submissions));
+    const submissions=JSON.parse(localStorage.getItem(`demo-submissions:deck-v1:${cfg.game}`)||'[]');submissions.push(result);localStorage.setItem(`demo-submissions:deck-v1:${cfg.game}`,JSON.stringify(submissions));
   }
   sessionStorage.removeItem(savedKey);show('complete');
  }catch(e){$('overall-error').textContent=e.message}

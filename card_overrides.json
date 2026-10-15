@@ -1,1 +1,338 @@
-{}
+{
+  "SLIDE-256": {
+    "title": "M01  /  STANDARD \u00b7 Pole Position",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-257": {
+    "title": "M01  /  ANSWER \u00b7 Pole Position",
+    "active": false
+  },
+  "SLIDE-258": {
+    "title": "M02  /  STANDARD \u00b7 Delay? What Delay?",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-259": {
+    "title": "M02  /  ANSWER \u00b7 Delay? What Delay?",
+    "active": false
+  },
+  "SLIDE-260": {
+    "title": "M03  /  ADVANCED \u00b7 Double the Gain, Double the Stability",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-261": {
+    "title": "M03  /  ANSWER \u00b7 Double the Gain, Double the Stability",
+    "active": false
+  },
+  "SLIDE-262": {
+    "title": "M04  /  GUIDED \u00b7 A Steady Correction",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-263": {
+    "title": "M04  /  ANSWER \u00b7 A Steady Correction",
+    "active": false
+  },
+  "SLIDE-264": {
+    "title": "M05  /  GUIDED \u00b7 Past the Limit",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-265": {
+    "title": "M05  /  ANSWER \u00b7 Past the Limit",
+    "active": false
+  },
+  "SLIDE-266": {
+    "title": "M06  /  GUIDED \u00b7 Response Under Load",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-267": {
+    "title": "M06  /  ANSWER \u00b7 Response Under Load",
+    "active": false
+  },
+  "SLIDE-268": {
+    "title": "M07  /  ADVANCED \u00b7 Feedback on Paper",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-269": {
+    "title": "M07  /  ANSWER \u00b7 Feedback on Paper",
+    "active": false
+  },
+  "SLIDE-270": {
+    "title": "M08  /  ADVANCED \u00b7 Looking Inside",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-271": {
+    "title": "M08  /  ANSWER \u00b7 Looking Inside",
+    "active": false
+  },
+  "SLIDE-272": {
+    "title": "M09  /  STANDARD \u00b7 Shared Noise",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-273": {
+    "title": "M09  /  ANSWER \u00b7 Shared Noise",
+    "active": false
+  },
+  "SLIDE-274": {
+    "title": "M10  /  STANDARD \u00b7 Two Sensors, One Signal",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-275": {
+    "title": "M10  /  ANSWER \u00b7 Two Sensors, One Signal",
+    "active": false
+  },
+  "SLIDE-276": {
+    "title": "M11  /  GUIDED \u00b7 Different Starts",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-277": {
+    "title": "M11  /  ANSWER \u00b7 Different Starts",
+    "active": false
+  },
+  "SLIDE-278": {
+    "title": "M12  /  STANDARD \u00b7 Local Agreement",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-279": {
+    "title": "M12  /  ANSWER \u00b7 Local Agreement",
+    "active": false
+  },
+  "SLIDE-280": {
+    "title": "M13  /  ADVANCED \u00b7 One Step Together",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-281": {
+    "title": "M13  /  ANSWER \u00b7 One Step Together",
+    "active": false
+  },
+  "SLIDE-282": {
+    "title": "M14  /  STANDARD \u00b7 Smooth on Screen",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-283": {
+    "title": "M14  /  ANSWER \u00b7 Smooth on Screen",
+    "active": false
+  },
+  "SLIDE-284": {
+    "title": "M15  /  GUIDED \u00b7 A Fair Trial",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-285": {
+    "title": "M15  /  ANSWER \u00b7 A Fair Trial",
+    "active": false
+  },
+  "SLIDE-286": {
+    "title": "M16  /  GUIDED \u00b7 Timing the Trials",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-287": {
+    "title": "M16  /  ANSWER \u00b7 Timing the Trials",
+    "active": false
+  },
+  "SLIDE-288": {
+    "title": "M17  /  GUIDED \u00b7 A Recipe to Repeat",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-289": {
+    "title": "M17  /  ANSWER \u00b7 A Recipe to Repeat",
+    "active": false
+  },
+  "SLIDE-290": {
+    "title": "M18  /  STANDARD \u00b7 The Missing Clock",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-291": {
+    "title": "M18  /  ANSWER \u00b7 The Missing Clock",
+    "active": false
+  },
+  "SLIDE-292": {
+    "title": "M19  /  ADVANCED \u00b7 A New Integral Law",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-293": {
+    "title": "M19  /  ANSWER \u00b7 A New Integral Law",
+    "active": false
+  },
+  "SLIDE-294": {
+    "title": "M20  /  STANDARD \u00b7 An Old Tool, A New Study",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-295": {
+    "title": "M20  /  ANSWER \u00b7 An Old Tool, A New Study",
+    "active": false
+  },
+  "SLIDE-296": {
+    "title": "M21  /  GUIDED \u00b7 A Classroom Control Study",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-297": {
+    "title": "M21  /  ANSWER \u00b7 A Classroom Control Study",
+    "active": false
+  },
+  "SLIDE-298": {
+    "title": "M22  /  ADVANCED \u00b7 Beyond the Linearization",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  "SLIDE-299": {
+    "title": "M22  /  ANSWER \u00b7 Beyond the Linearization",
+    "active": false
+  },
+  "SLIDE-300": {
+    "title": "M23  /  ADVANCED \u00b7 Stability Under Scheduling",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  "SLIDE-301": {
+    "title": "M23  /  ANSWER \u00b7 Stability Under Scheduling",
+    "active": false
+  },
+  "SLIDE-302": {
+    "title": "M24  /  ADVANCED \u00b7 The Cost of Correction",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  "SLIDE-303": {
+    "title": "M24  /  ANSWER \u00b7 The Cost of Correction",
+    "active": false
+  }
+}

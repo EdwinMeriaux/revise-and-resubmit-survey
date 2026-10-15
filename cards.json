@@ -1,132 +1,578 @@
 [
   {
-    "id": "RR-DEMO-001",
-    "title": "Demo Card 1",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-256",
+    "title": "M01  /  STANDARD · Pole Position",
+    "image": "card-images/SLIDE-256.png",
+    "active": true,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-002",
-    "title": "Demo Card 2",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-257",
+    "title": "M01  /  ANSWER · Pole Position",
+    "image": "card-images/SLIDE-257.png",
+    "active": false,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-003",
-    "title": "Demo Card 3",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-258",
+    "title": "M02  /  STANDARD · Delay? What Delay?",
+    "image": "card-images/SLIDE-258.png",
+    "active": true,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 1
   },
   {
-    "id": "RR-DEMO-004",
-    "title": "Demo Card 4",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-259",
+    "title": "M02  /  ANSWER · Delay? What Delay?",
+    "image": "card-images/SLIDE-259.png",
+    "active": false,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-005",
-    "title": "Demo Card 5",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-260",
+    "title": "M03  /  ADVANCED · Double the Gain, Double the Stability",
+    "image": "card-images/SLIDE-260.png",
+    "active": true,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 2
   },
   {
-    "id": "RR-DEMO-006",
-    "title": "Demo Card 6",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-261",
+    "title": "M03  /  ANSWER · Double the Gain, Double the Stability",
+    "image": "card-images/SLIDE-261.png",
+    "active": false,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-007",
-    "title": "Demo Card 7",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-262",
+    "title": "M04  /  GUIDED · A Steady Correction",
+    "image": "card-images/SLIDE-262.png",
+    "active": true,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-008",
-    "title": "Demo Card 8",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-263",
+    "title": "M04  /  ANSWER · A Steady Correction",
+    "image": "card-images/SLIDE-263.png",
+    "active": false,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
   },
   {
-    "id": "RR-DEMO-009",
-    "title": "Demo Card 9",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-264",
+    "title": "M05  /  GUIDED · Past the Limit",
+    "image": "card-images/SLIDE-264.png",
+    "active": true,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 1
   },
   {
-    "id": "RR-DEMO-010",
-    "title": "Demo Card 10",
-    "description": "Replace with a PowerPoint containing at least five card slides.",
-    "effect": "This is a demonstration card; content is not from your game.",
+    "id": "SLIDE-265",
+    "title": "M05  /  ANSWER · Past the Limit",
+    "image": "card-images/SLIDE-265.png",
+    "active": false,
     "options": [
-      "Option A",
-      "Option B",
-      "Option C"
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
     ],
-    "correct_option": 1,
-    "active": true
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-266",
+    "title": "M06  /  GUIDED · Response Under Load",
+    "image": "card-images/SLIDE-266.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-267",
+    "title": "M06  /  ANSWER · Response Under Load",
+    "image": "card-images/SLIDE-267.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-268",
+    "title": "M07  /  ADVANCED · Feedback on Paper",
+    "image": "card-images/SLIDE-268.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-269",
+    "title": "M07  /  ANSWER · Feedback on Paper",
+    "image": "card-images/SLIDE-269.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-270",
+    "title": "M08  /  ADVANCED · Looking Inside",
+    "image": "card-images/SLIDE-270.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-271",
+    "title": "M08  /  ANSWER · Looking Inside",
+    "image": "card-images/SLIDE-271.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-272",
+    "title": "M09  /  STANDARD · Shared Noise",
+    "image": "card-images/SLIDE-272.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-273",
+    "title": "M09  /  ANSWER · Shared Noise",
+    "image": "card-images/SLIDE-273.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-274",
+    "title": "M10  /  STANDARD · Two Sensors, One Signal",
+    "image": "card-images/SLIDE-274.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-275",
+    "title": "M10  /  ANSWER · Two Sensors, One Signal",
+    "image": "card-images/SLIDE-275.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-276",
+    "title": "M11  /  GUIDED · Different Starts",
+    "image": "card-images/SLIDE-276.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-277",
+    "title": "M11  /  ANSWER · Different Starts",
+    "image": "card-images/SLIDE-277.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-278",
+    "title": "M12  /  STANDARD · Local Agreement",
+    "image": "card-images/SLIDE-278.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-279",
+    "title": "M12  /  ANSWER · Local Agreement",
+    "image": "card-images/SLIDE-279.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-280",
+    "title": "M13  /  ADVANCED · One Step Together",
+    "image": "card-images/SLIDE-280.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-281",
+    "title": "M13  /  ANSWER · One Step Together",
+    "image": "card-images/SLIDE-281.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-282",
+    "title": "M14  /  STANDARD · Smooth on Screen",
+    "image": "card-images/SLIDE-282.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-283",
+    "title": "M14  /  ANSWER · Smooth on Screen",
+    "image": "card-images/SLIDE-283.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-284",
+    "title": "M15  /  GUIDED · A Fair Trial",
+    "image": "card-images/SLIDE-284.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-285",
+    "title": "M15  /  ANSWER · A Fair Trial",
+    "image": "card-images/SLIDE-285.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-286",
+    "title": "M16  /  GUIDED · Timing the Trials",
+    "image": "card-images/SLIDE-286.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-287",
+    "title": "M16  /  ANSWER · Timing the Trials",
+    "image": "card-images/SLIDE-287.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-288",
+    "title": "M17  /  GUIDED · A Recipe to Repeat",
+    "image": "card-images/SLIDE-288.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-289",
+    "title": "M17  /  ANSWER · A Recipe to Repeat",
+    "image": "card-images/SLIDE-289.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-290",
+    "title": "M18  /  STANDARD · The Missing Clock",
+    "image": "card-images/SLIDE-290.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-291",
+    "title": "M18  /  ANSWER · The Missing Clock",
+    "image": "card-images/SLIDE-291.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-292",
+    "title": "M19  /  ADVANCED · A New Integral Law",
+    "image": "card-images/SLIDE-292.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-293",
+    "title": "M19  /  ANSWER · A New Integral Law",
+    "image": "card-images/SLIDE-293.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-294",
+    "title": "M20  /  STANDARD · An Old Tool, A New Study",
+    "image": "card-images/SLIDE-294.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-295",
+    "title": "M20  /  ANSWER · An Old Tool, A New Study",
+    "image": "card-images/SLIDE-295.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-296",
+    "title": "M21  /  GUIDED · A Classroom Control Study",
+    "image": "card-images/SLIDE-296.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-297",
+    "title": "M21  /  ANSWER · A Classroom Control Study",
+    "image": "card-images/SLIDE-297.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-298",
+    "title": "M22  /  ADVANCED · Beyond the Linearization",
+    "image": "card-images/SLIDE-298.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 2
+  },
+  {
+    "id": "SLIDE-299",
+    "title": "M22  /  ANSWER · Beyond the Linearization",
+    "image": "card-images/SLIDE-299.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-300",
+    "title": "M23  /  ADVANCED · Stability Under Scheduling",
+    "image": "card-images/SLIDE-300.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 1
+  },
+  {
+    "id": "SLIDE-301",
+    "title": "M23  /  ANSWER · Stability Under Scheduling",
+    "image": "card-images/SLIDE-301.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-302",
+    "title": "M24  /  ADVANCED · The Cost of Correction",
+    "image": "card-images/SLIDE-302.png",
+    "active": true,
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ],
+    "correct_option": 0
+  },
+  {
+    "id": "SLIDE-303",
+    "title": "M24  /  ANSWER · The Cost of Correction",
+    "image": "card-images/SLIDE-303.png",
+    "active": false,
+    "options": [
+      "I would follow the instructions stated on the card",
+      "I would ignore the conditions printed on the card",
+      "I would skip this card entirely"
+    ],
+    "correct_option": 0
   }
 ]

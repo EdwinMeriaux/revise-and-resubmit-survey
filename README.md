@@ -29,3 +29,7 @@
 ## Local preview
 
 Run `python -m http.server 8000` from the repository root and open `http://localhost:8000`. With no configured Worker, submitted answers are stored **only in the browser** for preview, not the GitHub CSV.
+
+## Current survey deck
+
+The supplied PowerPoint is installed at `cards/cards.pptx`. Each participant evaluates one random active card. `card_overrides.json` excludes answer, reference, and template slides from assignment. The uploaded-deck collection round resets previous browser preview responses and progress; the response CSV currently contains only its header.
