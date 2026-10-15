@@ -13,7 +13,7 @@ const req = async (data) => {
 const shuffle = a => {for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 async function selectCards(){
  const r = await fetch('cards.json',{cache:'no-store'});if(!r.ok)throw new Error('Cards could not be loaded');
- const source=await r.json();return shuffle(source.filter(x=>x.active!==false)).slice(0,5);
+ const source=await r.json();return shuffle(source.filter(x=>x.active!==false)).slice(0,1);
 }
 function persist(){sessionStorage.setItem(savedKey,JSON.stringify({cards:state.cards,index:state.index,answers:state.answers,respondentId:state.respondentId,startedAt:state.startedAt}))}
 function renderCard(card){
@@ -45,11 +45,11 @@ async function start(){
  $('start').disabled=true;$('start').textContent='Loading cards…';
  try{
   let old;try{old=JSON.parse(sessionStorage.getItem(savedKey))}catch{}
-  if(old && old.cards?.length===5){Object.assign(state,old)}
-  else{state.startedAt=new Date().toISOString();state.cards=await selectCards();if(state.cards.length<5)throw new Error('At least five active cards are required.');state.index=0;persist()}
+  if(old && old.cards?.length===1){Object.assign(state,old)}
+  else{state.startedAt=new Date().toISOString();state.cards=await selectCards();if(state.cards.length<1)throw new Error('At least one active card is required.');state.index=0;persist()}
   render();show('survey');
  }catch(e){$('landing-error').textContent=e.message}
- finally{$('start').disabled=false;$('start').textContent='Start the 5-card survey →'}
+ finally{$('start').disabled=false;$('start').textContent='Start the 1-card survey →'}
 }
 async function submit(){
  if(state.busy)return;

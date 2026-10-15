@@ -12,7 +12,7 @@ export default {async fetch(request,env){
  if(request.method!=='POST')return new Response('Method not allowed',{status:405,headers:cors(origin)});
  try{
   const data=await request.json();
-  if(data.game!==env.GAME||!Array.isArray(data.cards)||data.cards.length!==5||typeof data.respondent_id!=='string'||data.respondent_id.length>100)throw Error('Malformed submission');
+  if(data.game!==env.GAME||!Array.isArray(data.cards)||data.cards.length!==1||typeof data.respondent_id!=='string'||data.respondent_id.length>100)throw Error('Malformed submission');
   const rows=data.cards.map(c=>[data.respondent_id,data.game,data.started_at,data.completed_at,data.overall_interest,data.overall_feedback,c.card_id,c.title,c.clarity,c.interest,c.comprehension,c.feedback].map(csv).join(',')).join('\n')+'\n';
   const url=`https://api.github.com/repos/${env.OWNER}/${env.REPO}/contents/data/responses.csv`;
   const headers={'Authorization':`Bearer ${env.GH_TOKEN}`,'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'academic-game-survey'};

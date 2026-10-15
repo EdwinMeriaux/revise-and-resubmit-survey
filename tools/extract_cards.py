@@ -10,7 +10,7 @@ if not pptx.exists():
  print('No cards/cards.pptx found: leaving placeholder cards.json intact')
  sys.exit(0)
 prs=Presentation(str(pptx))
-assert len(prs.slides)>=5, 'PowerPoint must have at least five slides (one per card)'
+assert len(prs.slides)>=1, 'PowerPoint must have at least one slide (one per card)'
 overrides=json.loads((root/'card_overrides.json').read_text())
 images=root/'card-images'
 if images.exists():shutil.rmtree(images)
