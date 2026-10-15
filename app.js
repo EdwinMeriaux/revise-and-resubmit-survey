@@ -61,7 +61,6 @@ async function submit(){
   else{
     // DEMO ONLY: responses stay in this browser, not a central database.
     const submissions=JSON.parse(localStorage.getItem(`demo-submissions:${cfg.game}`)||'[]');submissions.push(result);localStorage.setItem(`demo-submissions:${cfg.game}`,JSON.stringify(submissions));
-    $('demo-download').classList.remove('hidden');$('demo-download').onclick=()=>{const blob=new Blob([JSON.stringify(submissions,null,2)],{type:'application/json'});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=`${cfg.game}-demo-responses.json`;a.click();URL.revokeObjectURL(u)};
   }
   sessionStorage.removeItem(savedKey);show('complete');
  }catch(e){$('overall-error').textContent=e.message}
