@@ -1,0 +1,218 @@
+[
+  {
+    "id": "SLIDE-256",
+    "title": "M01  /  STANDARD \u00b7 Pole Position",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-258",
+    "title": "M02  /  STANDARD \u00b7 Delay? What Delay?",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-260",
+    "title": "M03  /  ADVANCED \u00b7 Double the Gain, Double the Stability",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-262",
+    "title": "M04  /  GUIDED \u00b7 A Steady Correction",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-264",
+    "title": "M05  /  GUIDED \u00b7 Past the Limit",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-266",
+    "title": "M06  /  GUIDED \u00b7 Response Under Load",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-268",
+    "title": "M07  /  ADVANCED \u00b7 Feedback on Paper",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-270",
+    "title": "M08  /  ADVANCED \u00b7 Looking Inside",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-272",
+    "title": "M09  /  STANDARD \u00b7 Shared Noise",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-274",
+    "title": "M10  /  STANDARD \u00b7 Two Sensors, One Signal",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-276",
+    "title": "M11  /  GUIDED \u00b7 Different Starts",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-278",
+    "title": "M12  /  STANDARD \u00b7 Local Agreement",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-280",
+    "title": "M13  /  ADVANCED \u00b7 One Step Together",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-282",
+    "title": "M14  /  STANDARD \u00b7 Smooth on Screen",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-284",
+    "title": "M15  /  GUIDED \u00b7 A Fair Trial",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-286",
+    "title": "M16  /  GUIDED \u00b7 Timing the Trials",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-288",
+    "title": "M17  /  GUIDED \u00b7 A Recipe to Repeat",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-290",
+    "title": "M18  /  STANDARD \u00b7 The Missing Clock",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-292",
+    "title": "M19  /  ADVANCED \u00b7 A New Integral Law",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-294",
+    "title": "M20  /  STANDARD \u00b7 An Old Tool, A New Study",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-296",
+    "title": "M21  /  GUIDED \u00b7 A Classroom Control Study",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-298",
+    "title": "M22  /  ADVANCED \u00b7 Beyond the Linearization",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-300",
+    "title": "M23  /  ADVANCED \u00b7 Stability Under Scheduling",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  },
+  {
+    "id": "SLIDE-302",
+    "title": "M24  /  ADVANCED \u00b7 The Cost of Correction",
+    "options": [
+      "Accept the manuscript",
+      "Request revisions",
+      "Reject the manuscript"
+    ]
+  }
+]

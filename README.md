@@ -1,35 +1,34 @@
-# Revise & Resubmit survey website
+# revise-and-resubmit-survey
 
-## Once-only setup
+Each participant evaluates one random active card from `cards/cards.pptx`. GitHub Actions renders the slides and publishes the website. `card_overrides.json` excludes templates, reference cards, and answer slides.
 
-1. Make a **public** GitHub repository called `revise-and-resubmit-survey`. Upload the contents of this folder to its repository root (not the outer ZIP folder).
-2. In Settings → Pages → Build and deployment, select **GitHub Actions**. This publishes at `https://YOUR_USERNAME.github.io/revise-and-resubmit-survey/`.
-3. Edit `worker/wrangler.toml` and replace `REPLACE_WITH_GITHUB_USERNAME` with your GitHub username (match capitalization of URLs). Use [Cloudflare Workers](https://developers.cloudflare.com/workers/get-started/guide/) to deploy the worker; run `npx wrangler deploy -c worker/wrangler.toml` from the repo root.
-4. Create a fine-grained GitHub personal access token scoped ONLY to this repository, granting **Contents: Read and write**. Store it in the worker secret named `GH_TOKEN` via `npx wrangler secret put GH_TOKEN -c worker/wrangler.toml`. **Never commit the token.**
-5. Set `submissionEndpoint` in `config.js` to your published Cloudflare Worker URL (typically `https://revise-and-resubmit-survey-writer.YOUR_SUBDOMAIN.workers.dev`). Push that change.
-6. Submit a test response and verify one record appears in `data/responses.csv` (GitHub → Code → data → responses.csv). **Do not distribute the survey before this test succeeds.**
+## Response collection
 
-## Normal use: update only PowerPoint
+Both surveys submit to Cloudflare Workers and save to the same private Cloudflare D1 database, **survey-responses**, in the **responses** table. The `game` column identifies each survey. Responses are not written to GitHub or offered for download to participants. Submission is confirmed only after the database accepts it. Retrying the same respondent ID does not create duplicate rows.
 
-- Put **one card per slide** in `cards/cards.pptx` and push the file to `main`.
-- GitHub Actions will convert the slides to PNGs and generate `cards.json` on the deployed site. It may take a few minutes for the build to finish.
-- At least **one slide** are required. Without a PowerPoint uploaded, the site uses clearly labeled demo cards, **not the real game deck**.
-- Each card automatically gets a stable ID from PowerPoint's internal slide ID. Reordering or editing an existing slide normally preserves its ID, but replacing a slide with a new one does not. Responses retain the old ID for analysis.
-- Optional: after the first workflow run, download the generated `cards.json` from the live site, then use its IDs in `card_overrides.json` to set human-readable names, answer choices, the correct option, or disabled cards. This is only needed to tailor multiple-choice comprehension to the real rules. If you change `card_overrides.json`, commit it to publish the changes.
+To view responses, sign in to Cloudflare, open **Storage & databases → D1 → survey-responses → Console**, and run:
 
-## Understanding the responses
+```sql
+SELECT * FROM responses ORDER BY received_at DESC;
+```
 
-- **Each survey submission appends one row** to `data/responses.csv`, one row per evaluated card, along with a respondent UUID, card ID and game.
-- To download results: GitHub → `data/responses.csv` → download raw CSV.
-- **WARNING:** If this repository is public, all response data and commit history are public. Participants should not provide identifying information. For confidential human-subject research, use a private response repository and configure the worker to write there instead.
-- GitHub commits on every response; this approach is best for **small pilots**, not large or high-concurrency studies.
-- The form's questions are the same across cards, but default multiple-choice comprehension answers are generic. Replace through `card_overrides.json` before actual research use.
-- A non-authenticated public form can receive spam and fabricated responses. Consider bot prevention for a formal study.
+To download all responses as a CSV, run `python tools/export_responses.py` after Wrangler login. The file is saved to `~/Downloads/survey-responses.csv`. Both surveys are included.
 
-## Local preview
+To export a database backup using an authenticated Wrangler installation:
 
-Run `python -m http.server 8000` from the repository root and open `http://localhost:8000`. With no configured Worker, submitted answers are stored **only in the browser** for preview, not the GitHub CSV.
+```sh
+npx wrangler d1 export survey-responses --remote --output /tmp/survey-responses.sql -c worker/wrangler.toml
+```
 
-## Current survey deck
+## Deploy the submission service
 
-The supplied PowerPoint is installed at `cards/cards.pptx`. Each participant evaluates one random active card. `card_overrides.json` excludes answer, reference, and template slides from assignment. The uploaded-deck collection round resets previous browser preview responses and progress; the response CSV currently contains only its header.
+Use the Workers Free plan. The existing `worker/wrangler.toml` binds the shared database.
+
+```sh
+npx wrangler login
+npx wrangler deploy -c worker/wrangler.toml
+```
+
+When changing cards, update `worker/allowed-cards.json` from the active card IDs, titles, and options in the generated `cards.json`, then redeploy the Worker.
+
+Existing browser-only preview responses are preserved on their originating devices; they have not been imported into the central database. The old `data/responses.csv` is an unused header-only file.

@@ -9,7 +9,9 @@ const configured = !!cfg.submissionEndpoint;
 const req = async (data) => {
  const r = await fetch(cfg.submissionEndpoint, {method:'POST', headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:JSON.stringify(data)});
  if(!r.ok) throw new Error(`Submission failed (${r.status}): ${await r.text()}`);
- return r.json();
+ const result=await r.json();
+ if(result.ok!==true)throw new Error('The server did not confirm your submission. Please try again.');
+ return result;
 };
 const shuffle = a => {for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 async function selectCards(){

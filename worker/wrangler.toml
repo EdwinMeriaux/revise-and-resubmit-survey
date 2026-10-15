@@ -1,9 +1,13 @@
 name = "revise-and-resubmit-survey-writer"
 main = "worker.js"
 compatibility_date = "2026-10-01"
+workers_dev = true
 
 [vars]
-OWNER = "REPLACE_WITH_GITHUB_USERNAME"
-REPO = "revise-and-resubmit-survey"
 GAME = "revise-and-resubmit"
-ALLOWED_ORIGIN = "https://REPLACE_WITH_GITHUB_USERNAME.github.io"
+ALLOWED_ORIGIN = "https://edwinmeriaux.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "survey-responses"
+database_id = "00cf13c9-d4bf-427a-9034-4a14aef1ed84"
