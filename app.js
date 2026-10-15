@@ -4,17 +4,16 @@ const cfg = window.SURVEY_CONFIG;
 const state = { cards: [], index: 0, answers: {}, respondentId: crypto.randomUUID(), startedAt: null, busy: false };
 const savedKey = `survey-progress:${cfg.game}`;
 const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const configured = !!(cfg.supabaseUrl && cfg.supabaseAnonKey && !cfg.supabaseUrl.includes('YOUR_PROJECT'));
-const req = async (path, method='GET', data) => {
- const r=await fetch(`${cfg.supabaseUrl.replace(/\/$/,'')}/rest/v1/${path}`,{method,headers:{'apikey':cfg.supabaseAnonKey,'Authorization':`Bearer ${cfg.supabaseAnonKey}`,'Content-Type':'application/json','Prefer':'return=representation'},body:data?JSON.stringify(data):undefined});
- if(!r.ok)throw new Error(`Survey server error (${r.status}). ${await r.text()}`);
- return r.status===204?null:r.json();
+const configured = !!cfg.submissionEndpoint;
+const req = async (data) => {
+ const r = await fetch(cfg.submissionEndpoint, {method:'POST', headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:JSON.stringify(data)});
+ if(!r.ok) throw new Error(`Submission failed (${r.status}): ${await r.text()}`);
+ return r.json();
 };
 const shuffle = a => {for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 async function selectCards(){
- if(configured){return await req('rpc/assign_survey_cards','POST',{p_game:cfg.game,p_count:5,p_respondent:state.respondentId})}
- const source = await (await fetch('cards.json')).json();
- return shuffle(source.filter(x=>x.active!==false)).slice(0,5);
+ const r = await fetch('cards.json',{cache:'no-store'});if(!r.ok)throw new Error('Cards could not be loaded');
+ const source=await r.json();return shuffle(source.filter(x=>x.active!==false)).slice(0,5);
 }
 function persist(){sessionStorage.setItem(savedKey,JSON.stringify({cards:state.cards,index:state.index,answers:state.answers,respondentId:state.respondentId,startedAt:state.startedAt}))}
 function renderCard(card){
@@ -58,7 +57,7 @@ async function submit(){
  const result={game:cfg.game,respondent_id:state.respondentId,started_at:state.startedAt,completed_at:new Date().toISOString(),overall_interest:Number(document.querySelector('input[name="overall_interest"]:checked')?.value),overall_feedback:$('overall-feedback').value.trim(),cards:state.cards.map(c=>({card_id:c.id,title:c.title,...state.answers[c.id]}))};
  try{
   if(!Number.isInteger(result.overall_interest))throw new Error('Please select an overall game interest rating.');
-  if(configured){await req('survey_submissions','POST',[{game:result.game,respondent_id:result.respondent_id,payload:result}])}
+  if(configured){await req(result)}
   else{
     // DEMO ONLY: responses stay in this browser, not a central database.
     const submissions=JSON.parse(localStorage.getItem(`demo-submissions:${cfg.game}`)||'[]');submissions.push(result);localStorage.setItem(`demo-submissions:${cfg.game}`,JSON.stringify(submissions));
@@ -73,4 +72,4 @@ $('next').onclick=()=>{const a=collect();if(!validate(a)){$('survey-error').text
 $('prev').onclick=()=>{collect();state.index=Math.max(0,state.index-1);persist();render()};
 $('back-overall').onclick=()=>{render();show('survey')};$('submit').onclick=submit;
 $('start-new').onclick=()=>location.reload();
-$('mode').textContent=configured?'Responses securely sent to survey database':'Preview mode · responses are saved only in this browser';
+$('mode').textContent=configured?'Responses saved to this game’s GitHub CSV':'Preview mode · configure submissionEndpoint before collecting responses';

@@ -1,0 +1,32 @@
+name: Publish survey from PowerPoint
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PowerPoint renderer
+        run: sudo apt-get update && sudo apt-get install -y libreoffice-impress poppler-utils && python -m pip install python-pptx
+      - name: Extract slides as images
+        run: python tools/extract_cards.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,142 +1,132 @@
 [
   {
-    "id": "RE-001",
-    "title": "Major Revision",
-    "description": "The editor requests substantial changes to methods and presentation.",
-    "effect": "Determine what a revised submission needs.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-001",
+    "title": "Demo Card 1",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-002",
-    "title": "Reviewer Disagreement",
-    "description": "One reviewer recommends acceptance while another requests rejection.",
-    "effect": "Resolve conflicting assessments.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-002",
+    "title": "Demo Card 2",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-003",
-    "title": "Missing Baseline",
-    "description": "A reviewer finds that a key comparison is absent.",
-    "effect": "Consider the required new experiment.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-003",
+    "title": "Demo Card 3",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-004",
-    "title": "Novelty Concern",
-    "description": "The results are promising, but reviewers question originality.",
-    "effect": "Clarify what contribution is genuinely new.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-004",
+    "title": "Demo Card 4",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-005",
-    "title": "Reproducibility Check",
-    "description": "The manuscript lacks sufficient implementation details.",
-    "effect": "Identify missing methodological information.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-005",
+    "title": "Demo Card 5",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-006",
-    "title": "Scope Mismatch",
-    "description": "A paper may be scientifically sound but outside the venue’s scope.",
-    "effect": "Consider appropriate publication strategy.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-006",
+    "title": "Demo Card 6",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-007",
-    "title": "Additional Experiment",
-    "description": "The editor requests an experiment under a short deadline.",
-    "effect": "Choose how to prioritize the revision.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-007",
+    "title": "Demo Card 7",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-008",
-    "title": "Presentation Issues",
-    "description": "A strong technical submission is hard to follow.",
-    "effect": "Improve structure, figures and explanation.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-008",
+    "title": "Demo Card 8",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-009",
-    "title": "Conditional Acceptance",
-    "description": "The editor offers publication subject to specific changes.",
-    "effect": "Identify the required conditions.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-009",
+    "title": "Demo Card 9",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   },
   {
-    "id": "RE-010",
-    "title": "Desk Rejection",
-    "description": "The manuscript is rejected before external peer review.",
-    "effect": "Consider an appropriate next step.",
-    "image": "",
-    "active": true,
+    "id": "RR-DEMO-010",
+    "title": "Demo Card 10",
+    "description": "Replace with a PowerPoint containing at least five card slides.",
+    "effect": "This is a demonstration card; content is not from your game.",
     "options": [
-      "Proceed without considering the card conditions.",
-      "Evaluate the specific conditions described on the card.",
-      "Ignore the scenario and choose randomly."
+      "Option A",
+      "Option B",
+      "Option C"
     ],
-    "correct_option": 1
+    "correct_option": 1,
+    "active": true
   }
 ]
